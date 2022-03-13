@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jump.css" />
-    <title>Document</title>
+    <title>Jumping</title>
 </head>
 
 <body id="body" onclick="jump()">
@@ -16,14 +16,15 @@
 
         <div id="lose">
 
-            <img src="giphy.gif">
-            <h3>Now Enter the numbers you saw
+            <img src="giphy.gif" id ="lost">
+            <img src = "200.webp" id = "won">
+            <h1 id = "content">Now Enter the numbers you saw</h1>
                 <input type="number" id="theNumber">
                 <br /><br />
                 <button id="submit" onclick="checkValue()">Submit</button>
                 <br /><br />
-                <button onclick="restart()">Restart</button>
-            </h3>
+                <button id = "restart" onclick="restart()">Restart</button>
+            
 
         </div>
         <div id="panel">

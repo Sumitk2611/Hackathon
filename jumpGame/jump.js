@@ -8,8 +8,16 @@ var startButton = document.getElementById("start");
 var h6 = document.getElementById("numberDisplayer");
 var html = document.getElementsByTagName("html");
 var gameConsole = document.getElementById("game");
+var submitButton = document.getElementById("submit");
+var restartButton = document.getElementById("restart");
+var numberReceiver = document.getElementById("theNumber");
+var h3 = document.getElementById("content")
 
-
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        jump();
+    }
+}
 var count = 0;
 function jump() {
     count++;
@@ -74,11 +82,21 @@ function randomNumberGen(){
 
 }
 
+
 function checkValue() {
     var value = document.querySelector('input').value;
     if (value == 5){
-        console.log("woohoo")
+        document.getElementById("won").style.display = "block";
+        console.log("win")
+    } else {
+        document.getElementById("lost").style.display = "block";
+        console.log("lost")
     }
+    submitButton.style.display = "none";
+    // restartButton.style.display = "none";
+    numberReceiver.style.display = "none";
+    content.style.display = "none";
+
 }
 
 
