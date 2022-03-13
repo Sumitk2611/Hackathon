@@ -29,7 +29,7 @@ var checkDead = setInterval(function() {
 
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
-    if(blockLeft < 60 && blockLeft > 0 && characterTop>=479) {
+    if(blockLeft < 65 && blockLeft > 0 && characterTop>=450) {
         block.style.animation = "none";
         panel.style.animation = "none";
         block.style.display = "none";
