@@ -41,6 +41,7 @@ setInterval(function(){
     if(gamerLeft == obstacleLeft && obstacleTop < 500 && obstacleTop > 300) {
         obstacle.style.animation = "none";
         alert("Game Over! Score: " + count);
+        location.reload();
     }
 
 }, 1);
