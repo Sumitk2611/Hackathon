@@ -117,6 +117,7 @@ body {
 .button:hover {
     color: #00b4ff;
     background-color: #f1f1f1;
+    font-weight: bolder;
 }
 
 #dropGameInfo {
