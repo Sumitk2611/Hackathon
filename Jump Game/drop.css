@@ -1,0 +1,98 @@
+body {
+    background-color:black;
+    margin-left: 0%;
+}
+
+#submit{
+    width: 50%;
+    height:auto;
+}
+#lose {
+    display:none;
+    width: 500px;
+    height:100px;
+    animation: none;
+    text-align: center;
+    color:white;
+    position: relative;
+    top:125px;
+    left:30%;
+}
+
+#lose button {
+    width: 300px;
+    height: 80px;
+    background-color: yellow;
+    border: 3px solid yellowgreen;
+}
+
+#game{
+    width:auto;
+    height: 95vh;
+
+}
+@keyframes jump {
+    0% {top: 479px;}
+    30% { top: 400px;}
+    70% { top: 400px;}
+    100% { top: 479px;}
+    
+}
+#character {
+    width: 50px;
+    height: 100px;
+    background-color: blanchedalmond;
+    position: relative;
+    top: 479px;
+
+}
+#character img {
+    height:100px;
+    width:auto;
+}
+.animate {
+    animation: jump 500ms;
+}
+
+#panel{
+    width: 200px;
+    height:100px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 650px;
+    top:100px;
+    color:rgb(248, 248, 248);
+    text-align: center;
+    font-size: 4em;
+    animation:none;
+}
+#numberDisplayer{
+    font-size: 25px;
+}
+#block {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    position:relative;
+    top:430px;
+    left:90%;
+    border-radius: 100%;
+    animation: none;
+}
+@keyframes block {
+    0% {left:97%;}
+    100% {left: -100px;}
+    
+}
+
+@keyframes block2 {
+    0% {left:86%;}
+    100% {left: -500px;}
+     
+}
+
+#start {
+    position: relative;
+    top:0px;
+
+}
