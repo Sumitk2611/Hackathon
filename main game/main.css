@@ -126,8 +126,9 @@ body {
     left: 1000px;
     background-color: #f1f1f1;
     width:300px;
-    height:300px;
+    height:100px;
     border-radius: 12px;
+    padding: 1%;
     text-align: center;
     display: none;
 }
@@ -138,8 +139,9 @@ body {
     left: 1000px;
     background-color: #f1f1f1;
     width:300px;
-    height:300px;
+    height:100px;
     border-radius: 12px;
+    padding: 1%;
     text-align: center;
     display: none;
 }
@@ -150,8 +152,9 @@ body {
     left: 1000px;
     background-color: #f1f1f1;
     width:300px;
-    height:300px;
+    height:100px;
     border-radius: 12px;
+    padding: 1%;
     text-align: center;
     display: none;
 }
@@ -162,8 +165,9 @@ body {
     left: 1000px;
     background-color: #f1f1f1;
     width:300px;
-    height:300px;
+    height:100px;
     border-radius: 12px;
+    padding: 1%;
     text-align: center;
     display: none;
 }
