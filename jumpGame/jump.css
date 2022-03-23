@@ -107,6 +107,7 @@ input {
 
 @keyframes block2 {
     0% {left:86%;}
+    90% {left:-500px;}
     100% {left: -500px;}
      
 }

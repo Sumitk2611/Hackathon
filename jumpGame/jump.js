@@ -18,7 +18,7 @@ document.body.onkeyup = function(e){
         jump();
     }
 }
-var count = 0;
+var count = -1;
 function jump() {
     count++;
     if(character.classList != "animate"){
@@ -54,11 +54,12 @@ var checkDead = setInterval(function() {
 var randomNumber = setInterval(function() {
     
     var panelLeft = parseInt(window.getComputedStyle(panel).getPropertyValue("left"));
-    if(panelLeft < -200) {
-       randomNumberGen();
+    
+    if(panelLeft <= -400) {
+      let y = randomNumberGen();
     }
     
-})
+}, 2352)
 
 // refreshes the page
 function restart() {
@@ -69,28 +70,42 @@ function begin() {
     panel.style.animation = "block2 4s infinite";
     block.style.animation ="block 2s infinite";
     startButton.style.display = "none";
+    let y = 0;
     randomNumberGen();
     h6.style.display = "none";
     gameConsole.style.border ="2px solid black";
 
 }
-let x;
 
+var x;
+var numbers = [];
+let i = 1;
 function randomNumberGen(){
     x = Math.floor((Math.random()*10)+1) ;
-    number.innerHTML = x;           
-
+    number.innerHTML = x;    
+    numbers.push(x);
+    //stores the random number everytime this function runs (everyone can use)       
+    window.localStorage.setItem(i, x);
+    i++;
 }
+console.log(numbers);
+
 
 
 function checkValue() {
     var value = document.querySelector('input').value;
-    if (value == 5){
+    // gets the stored number and uses it in a condition. (everyone can use)
+   
+    var sum = firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber;
+    console.log(sum);
+    if (value == sum){
         document.getElementById("won").style.display = "block";
         console.log("win")
+        window.localStorage.clear();
     } else {
         document.getElementById("lost").style.display = "block";
         console.log("lost")
+        window.localStorage.clear();
     }
     submitButton.style.display = "none";
     // restartButton.style.display = "none";
@@ -98,5 +113,3 @@ function checkValue() {
     content.style.display = "none";
 
 }
-
-
