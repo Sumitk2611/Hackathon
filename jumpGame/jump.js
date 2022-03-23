@@ -59,7 +59,7 @@ var randomNumber = setInterval(function() {
       let y = randomNumberGen();
     }
     
-}, 2352)
+}, 2351)
 
 // refreshes the page
 function restart() {
@@ -78,11 +78,13 @@ function begin() {
 }
 
 var x;
+//creates an array which stores the numbers.
 var numbers = [];
 let i = 1;
 function randomNumberGen(){
     x = Math.floor((Math.random()*10)+1) ;
-    number.innerHTML = x;    
+    number.innerHTML = x; 
+    //pushes the number to the array so that it can be stored.   
     numbers.push(x);
     //stores the random number everytime this function runs (everyone can use)       
     window.localStorage.setItem(i, x);
@@ -91,14 +93,15 @@ function randomNumberGen(){
 console.log(numbers);
 
 
-
+// checks the value entered by the user.
 function checkValue() {
     var value = document.querySelector('input').value;
     // gets the stored number and uses it in a condition. (everyone can use)
    
-    var sum = firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber;
-    console.log(sum);
-    if (value == sum){
+    //takes the firstNumber from the array.
+    var firstNumber = numbers[0];
+    console.log(firstNumber);
+    if (value == firstNumber){
         document.getElementById("won").style.display = "block";
         console.log("win")
         window.localStorage.clear();
